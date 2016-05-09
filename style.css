@@ -9,9 +9,60 @@ html {
   display: none !important; }
 
 .vjs-big-play-button {
-  font-size: 0em !important; }
+  font-size: 0 !important;
+  margin-top: -52.5px !important;
+  margin-left: -52.5px !important; }
 
 .vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
   content: url("img/Playicon.png") !important; }
+
+/* -------------------------- Ambassador Section  NEAT layout ------------------------ */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.card-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .card-row:last-child {
+    margin-right: 0; }
+
+.card {
+  margin-left: 8.5298%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  margin-right: 0; }
+  .card:last-child {
+    margin-right: 0; }
+
+/* -------------------------- Ambassador Section styling ------------------------ */
+/*.card {
+  img {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    text-align: center;
+  }
+
+  P, h4 {
+    text-align: center;
+  }
+}*/
+div img {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  text-align: center; }
+div P, div h4 {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
