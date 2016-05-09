@@ -9,24 +9,9 @@ html {
   display: none !important; }
 
 .vjs-big-play-button {
-  /*background-color: transparent !important;
-  width: 1.5em !important;
-  height: 1.5em !important;
-  line-height:1.5em !important;
-  border: 2px solid white !important;
-  border-radius: 50% !important;*/
-  /*background-image: url("/img/Playicon.png") !important;*/
-  /*background-image: url("/img/Playicon2.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: 50% 50% !important;
-  !* put the height and width of your image here *!
-  height: 150px !important;
-  width: 150px !important;
-  border: none !important;*/ }
+  font-size: 0em !important; }
 
-/*
 .vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
-  content: url("/img/Playicon.png");
-}*/
+  content: url("img/Playicon.png") !important; }
 
 /*# sourceMappingURL=style.css.map */
