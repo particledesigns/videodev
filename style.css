@@ -26,26 +26,43 @@ html {
     content: "";
     display: table; }
 
-.card-row {
+.intro {
+  margin-left: 17.05961%;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
-  .card-row:last-child {
+  width: 48.82117%;
+  text-align: justify; }
+  .intro:last-child {
     margin-right: 0; }
 
-.card {
+.card-row {
   margin-left: 8.5298%;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 14.70196%;
-  margin-right: 0; }
-  .card:last-child {
+  width: 91.4702%; }
+  .card-row:last-child {
     margin-right: 0; }
+  .card-row .card {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-right: 0; }
+    .card-row .card:last-child {
+      margin-right: 0; }
+    .card-row .card img {
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+      text-align: center; }
+    .card-row .card p, .card-row .card h4 {
+      text-align: center; }
 
 /* -------------------------- Ambassador Section styling ------------------------ */
-/*.card {
+/*div {
+
   img {
     border-radius: 50%;
     width: 10em;
@@ -57,12 +74,5 @@ html {
     text-align: center;
   }
 }*/
-div img {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
-  text-align: center; }
-div P, div h4 {
-  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
