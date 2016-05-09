@@ -9,7 +9,9 @@ html {
   display: none !important; }
 
 .vjs-big-play-button {
-  font-size: 0em !important; }
+  font-size: 0em !important;
+  margin-top: -52.5px !important;
+  margin-left: -52.5px !important; }
 
 .vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
   content: url("img/Playicon.png") !important; }
