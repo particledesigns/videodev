@@ -20,12 +20,16 @@
 
     <div class="container">
 
-    <video
-            id="example_video_1"
-            class="video-js vjs-default-skin vjs-big-play-centered"
-            controls
-    >
-    </video>
+        <div class="video-container">
+
+            <video
+                    id="example_video_1"
+                    class="video-js vjs-default-skin vjs-big-play-centered"
+                    controls
+            >
+            </video>
+
+        </div>
 
     <div class="intro">
         <h2>Underrubrik til Ambasadorer</h2>
@@ -41,7 +45,7 @@
     <div class="card-row">
 
         <div class="card">
-            <a href="#" onclick="testVideoChange()"><img src="img/person.jpg"></a>
+            <a href="#" onclick="testVideoChange('https://www.youtube.com/watch?v=HQoRXhS7vlU')"><img src="img/person.jpg"></a>
             <h4>Sylvia Jordan</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus in tortor vel placerat. Maecenas non risus odio.</p>
         </div>
@@ -143,7 +147,7 @@
     <script>
         var myPlayer = videojs("example_video_1", {
             "controls": true,
-            "autoplay": false,
+            "autoplay": true,
             "preload": "auto",
             "width": 1200,
             "height": 480,
@@ -169,14 +173,25 @@
         // Play through the playlist automatically.
         myPlayer.playlist.autoadvance(0);
 
-        /*function testVideoChange(){
-            myPlayer.src({
-                /!*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*!/
-                type: "video/youtube", src: "https://www.youtube.com/watch?v=HQoRXhS7vlU"
-            });
-            var x = document.getElementsByClassName("vjs-poster");
-            x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
-        }*/
+        /*var videoUrl = "https://www.youtube.com/watch?v=HQoRXhS7vlU";*/
+
+        function testVideoChange(videoUrl){
+            if(typeof videoUrl !== "undefined"){
+                myPlayer.src({
+                    /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
+                    type: "video/youtube", src: "" + videoUrl
+                });
+                var x = document.getElementsByClassName("vjs-poster");
+                x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
+            } else if(typeof videoUrl == "undefined"){
+                myPlayer.src({
+                    /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
+                    type: "video/youtube", src: "https://www.youtube.com/watch?v=HQoRXhS7vlU"
+                });
+                var x = document.getElementsByClassName("vjs-poster");
+                x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
+            }
+        }
     </script>
 </body>
 </html>
