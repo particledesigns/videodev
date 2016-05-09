@@ -7,12 +7,12 @@
 
 
 .vjs-control-bar {
-  /*display: none !important;*/
+  display: none !important;
 }
 
 .vjs-big-play-button {
 
-  font-size: 1em !important;
+  font-size: 0 !important;
   margin-top: -52.5px !important;
   margin-left: -52.5px !important;
 }
@@ -26,5 +26,55 @@
 }
 
 
+/* -------------------------- Ambassador Section  NEAT layout ------------------------ */
+
+.container {
+  @include outer-container;
+}
+
+.card-row {
+  @include span-columns(12);
+
+}
+
+
+.card {
+    @include shift(1 of 12);
+    @include span-columns(2 of 12);
+    @include omega()
+
+}
+
+
+/* -------------------------- Ambassador Section styling ------------------------ */
+
+/*.card {
+  img {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    text-align: center;
+  }
+
+  P, h4 {
+    text-align: center;
+  }
+}*/
+
+
+
+div {
+
+  img {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    text-align: center;
+  }
+
+  P, h4 {
+    text-align: center;
+  }
+}
 
 
