@@ -6,10 +6,10 @@ html {
 
 /* -------------------------- Play button styling ------------------------ */
 .vjs-control-bar {
-  display: none !important; }
+  /*display: none !important;*/ }
 
 .vjs-big-play-button {
-  font-size: 0em !important;
+  font-size: 1em !important;
   margin-top: -52.5px !important;
   margin-left: -52.5px !important; }
 

@@ -22,32 +22,52 @@
             id="example_video_1"
             class="video-js vjs-default-skin vjs-big-play-centered"
             controls
-            data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'
     >
     </video>
+
+    <!--data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'-->
 
     <a href="#" onclick="testVideoChange()">Change video!</a>
 
     <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
     <script src="js/Youtube.js"></script>
+    <script src="node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
     <script>
         var myPlayer = videojs("example_video_1", {
             "controls": true,
             "autoplay": false,
             "preload": "auto",
             "width": 1200,
-            "height": 480
+            "height": 480,
+            "techOrder": ["youtube"]
         }, function(){
             // Player (this) is initialized and ready
         });
 
+        myPlayer.playlist([{
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=xjS6SftYQaQ',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/xjS6SftYQaQ/maxresdefault.jpg'
+        }, {
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=HQoRXhS7vlU',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
+        }]);
+
+        // Play through the playlist automatically.
+        myPlayer.playlist.autoadvance(0);
+
         function testVideoChange(){
-            myPlayer.src({
-                /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
+            /*myPlayer.src({
+                /!*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*!/
                 type: "video/youtube", src: "https://www.youtube.com/watch?v=HQoRXhS7vlU"
             });
             var x = document.getElementsByClassName("vjs-poster");
-            x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
+            x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";*/
         }
     </script>
 </body>
