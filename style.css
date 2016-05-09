@@ -4,4 +4,16 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/* -------------------------- Play button styling ------------------------ */
+.vjs-control-bar {
+  display: none !important; }
+
+.vjs-big-play-button {
+  background-color: transparent !important;
+  width: 1.5em !important;
+  height: 1.5em !important;
+  line-height: 1.5em !important;
+  border: 2px solid white !important;
+  border-radius: 50% !important; }
+
 /*# sourceMappingURL=style.css.map */
