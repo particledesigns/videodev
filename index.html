@@ -147,10 +147,6 @@
             "preload": "auto",
             "width": 1200,
             "height": 480
-            /*controlBar: {
-                muteToggle: false,
-                volumeControl: false
-            }*/
         }, function(){
             // Player (this) is initialized and ready
         });
@@ -160,9 +156,8 @@
                 /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
                 type: "video/youtube", src: "https://www.youtube.com/watch?v=HQoRXhS7vlU"
             });
-            var updatePoster = document.getElementsByClassName("vjs-poster");
-            updatePoster.style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg') !important";
-            updatePoster.style.zIndex = "1000 !important";
+            var x = document.getElementsByClassName("vjs-poster");
+            x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
         }
     </script>
 </body>
