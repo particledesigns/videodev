@@ -7,32 +7,36 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered">
-    <!-- data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }'-->
+    <!--<video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+           data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}]>
+    &lt;!&ndash; data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }'&ndash;&gt;
         <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
         <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
         <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider
             upgrading to a web browser that <a href="http://videojs.com/html5-video-support/"
             target="_blank">supports HTML5 video</a></p>
+    </video>-->
+
+    <video
+            id="example_video_1"
+            class="video-js vjs-default-skin"
+            controls
+            data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'
+    >
     </video>
 
     <a href="#" onclick="testVideoChange()">Change video!</a>
 
     <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
-    <script>
-        _V_.ControlBar.prototype.options.components = {'playToggle':{}}
-    </script>
+    <script src="js/Youtube.js"></script>
     <script>
         var myPlayer = videojs("example_video_1", {
             "controls": true,
             "autoplay": false,
             "preload": "auto",
             "width": 1200,
-            "height": 480,
-            plugins: {
-                title: {}
-            }
+            "height": 480
             /*controlBar: {
                 muteToggle: false,
                 volumeControl: false
@@ -43,8 +47,12 @@
 
         function testVideoChange(){
             myPlayer.src({
-                type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"
+                /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
+                type: "video/youtube", src: "https://www.youtube.com/watch?v=HQoRXhS7vlU"
             });
+            var updatePoster = document.getElementsByClassName("vjs-poster");
+            updatePoster.style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg') !important";
+            updatePoster.style.zIndex = "1000 !important";
         }
     </script>
 </body>
