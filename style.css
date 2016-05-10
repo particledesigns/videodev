@@ -78,7 +78,8 @@ html {
     display: block;
     margin-right: 2.84259%;
     width: 17.72593%;
-    margin-right: 0; }
+    margin-right: 0;
+    text-align: center; }
     .card-row .card:last-child {
       margin-right: 0; }
     .card-row .card img {

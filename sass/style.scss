@@ -80,6 +80,8 @@
     @include span-columns(2 of 10);
     @include omega();
 
+    text-align: center;
+
 
     img {
       border-radius: 50%;
