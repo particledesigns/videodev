@@ -31,6 +31,8 @@
 
             <h3 class="video-title"></h3>
 
+            <div class="video-playlist-container"></div>
+
         </div>
 
     <div class="intro">
@@ -154,7 +156,7 @@
             "autoplay": false,
             "preload": "auto",
             "width": 1200,
-            "height": 480,
+            "height": 600,
             "techOrder": ["youtube"]
         }, function(){
             // Player (this) is initialized and ready
@@ -173,12 +175,43 @@
                 type: 'video/youtube'
             }],
             poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
+        }, {
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=HQoRXhS7vlU',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
+        }, {
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=HQoRXhS7vlU',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
+        }, {
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=HQoRXhS7vlU',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
+        }, {
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=HQoRXhS7vlU',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
+        }, {
+            sources: [{
+                src: 'https://www.youtube.com/watch?v=HQoRXhS7vlU',
+                type: 'video/youtube'
+            }],
+            poster: 'https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg'
         }]);
 
         // Play through the playlist automatically.
         myPlayer.playlist.autoadvance(0);
 
         videojs("example_video_1").ready(function(){
+            populatePlaylistHTML();
             myPlayer.on("play", function(){
                 var y = document.getElementsByClassName("video-title");
                 y[0].innerHTML = "";
@@ -192,6 +225,17 @@
                 }
             });
         });
+
+        function populatePlaylistHTML(){
+            var pDiv = document.getElementsByClassName("video-playlist-container");
+            var pSize = myPlayer.playlist();
+            var pBuild = "<ul class='video-playlist'>";
+            for(index = 0; index < pSize.length; index++){
+                pBuild += "<li><a href='#' onclick='navigatePlaylist("+index+")'></a></li>";
+            }
+            pBuild += "</ul>";
+            pDiv[0].innerHTML = pBuild;
+        }
 
         function navigatePlaylist(number){
             myPlayer.playlist.currentItem(number);
