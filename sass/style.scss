@@ -10,14 +10,15 @@
 
   position: relative;
   h3 {
-    min-width: 20%;
-    min-height: 20%;
+    min-width: 10%;
+    min-height: 10%;
     color: white;
     text-align: center;
     vertical-align: middle;
     position: absolute;
-    top: 60%;
-    left: 40%;
+    top: 55%;
+    left: 45%;
+    pointer-events: none;
   }
 }
 
