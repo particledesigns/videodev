@@ -6,7 +6,13 @@ html {
 
 /* -------------------------- Play button styling ------------------------ */
 .video-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   position: relative; }
+  .video-container:last-child {
+    margin-right: 0; }
   .video-container h3 {
     min-width: 20%;
     min-height: 20%;

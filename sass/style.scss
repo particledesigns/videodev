@@ -6,6 +6,8 @@
 
 
 .video-container {
+  @include span-columns(12);
+
   position: relative;
   h3 {
     min-width: 20%;
@@ -27,8 +29,6 @@
   background-color: transparent !important;
   /*display: none !important;*/
 }
-
-
 
 .vjs-big-play-button {
 
