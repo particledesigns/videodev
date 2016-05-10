@@ -29,6 +29,8 @@
             >
             </video>
 
+            <h3 class="video-title"></h3>
+
         </div>
 
     <div class="intro">
@@ -45,7 +47,7 @@
     <div class="card-row">
 
         <div class="card">
-            <a href="#" onclick="testVideoChange('https://www.youtube.com/watch?v=HQoRXhS7vlU')"><img src="img/person.jpg"></a>
+            <a href="#" onclick="testVideoChange('https://www.youtube.com/watch?v=HQoRXhS7vlU', 'Sylvia Jordan')"><img src="img/person.jpg"></a>
             <h4>Sylvia Jordan</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus in tortor vel placerat. Maecenas non risus odio.</p>
         </div>
@@ -147,7 +149,7 @@
     <script>
         var myPlayer = videojs("example_video_1", {
             "controls": true,
-            "autoplay": true,
+            "autoplay": false,
             "preload": "auto",
             "width": 1200,
             "height": 480,
@@ -173,16 +175,29 @@
         // Play through the playlist automatically.
         myPlayer.playlist.autoadvance(0);
 
+        var video = document.getElementsByTagName('example_video_1')[0];
+
+        video.onplaying = function(e) {
+            var y = document.getElementsByClassName("video-title");
+            y[0].innerHTML = "";
+        };
+        video.onpause = function(e) {
+            var y = document.getElementsByClassName("video-title");
+            y[0].innerHTML = "Sample";
+        };
+
         /*var videoUrl = "https://www.youtube.com/watch?v=HQoRXhS7vlU";*/
 
-        function testVideoChange(videoUrl){
-            if(typeof videoUrl !== "undefined"){
+        function testVideoChange(videoUrl, title){
+            if(typeof videoUrl !== "undefined" && typeof title !== "undefined"){
                 myPlayer.src({
                     /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
                     type: "video/youtube", src: "" + videoUrl
                 });
                 var x = document.getElementsByClassName("vjs-poster");
                 x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
+                var y = document.getElementsByClassName("video-title");
+                y[0].innerHTML = "" + title;
             } else if(typeof videoUrl == "undefined"){
                 myPlayer.src({
                     /*type: "video/mp4", src: "http://vjs.zencdn.net/v/oceans.mp4"*/
@@ -190,6 +205,8 @@
                 });
                 var x = document.getElementsByClassName("vjs-poster");
                 x[0].style.backgroundImage = "url('https://img.youtube.com/vi/HQoRXhS7vlU/maxresdefault.jpg')";
+                var y = document.getElementsByClassName("video-title");
+                y[0].innerHTML = "Sylvia Jordan";
             }
         }
     </script>

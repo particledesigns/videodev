@@ -5,6 +5,19 @@ html {
   box-sizing: inherit; }
 
 /* -------------------------- Play button styling ------------------------ */
+.video-container {
+  position: relative; }
+  .video-container h3 {
+    min-width: 20%;
+    min-height: 20%;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 60%;
+    left: 40%; }
+
+/* -------------------------- Play button styling ------------------------ */
 .vjs-control-bar {
   display: none !important; }
 
