@@ -48,14 +48,11 @@
 
 /* -------------------------- Play button styling ------------------------ */
 
-
 .vjs-control-bar {
   background-color: transparent !important;
-  /*display: none !important;*/
 }
 
 .vjs-big-play-button {
-
   font-size: 0em !important;
   margin-top: -52.5px !important;
   margin-left: -52.5px !important;
@@ -67,16 +64,11 @@
 
 .vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
   content: url("img/Playicon.png") !important;
-
-
-
-
-
 }
 
-/* Play/Pause
---------------------------------------------------------------------------------
-*/
+
+/* -------------------------- Play/Pause ------------------------ */
+
 .vjs-default-skin .vjs-play-control {
   display: block !important;
   top: -900%;
@@ -86,17 +78,17 @@
   width: 10em;
   cursor: pointer;
 }
+
 .vjs-default-skin .vjs-play-control:before {
   content: url("img/Playicon.png") !important;
 }
+
 .vjs-default-skin.vjs-playing .vjs-play-control:before {
   content: url("img/Pauseicon.png") !important;
-
-
 }
 
 
-/* -------------------------- Ambassador Section  NEAT layout ------------------------ */
+/* -------------------------- Ambassador Section layout ------------------------ */
 
 .container {
   @include outer-container();
@@ -105,8 +97,6 @@
 .intro {
   @include shift(2);
   @include span-columns(6);
-
-
 }
 
 .card-row {
@@ -119,41 +109,11 @@
 
     text-align: center;
 
-
     img {
       border-radius: 50%;
       width: 10em;
       height: 10em;
-      text-align: center;
     }
-
-    p, h4 {
-      text-align: center;
-    }
-
   }
 
 }
-
-
-
-
-/* -------------------------- Ambassador Section styling ------------------------ */
-
-
-
-/*div {
-
-  img {
-    border-radius: 50%;
-    width: 10em;
-    height: 10em;
-    text-align: center;
-  }
-
-  P, h4 {
-    text-align: center;
-  }
-}*/
-
-

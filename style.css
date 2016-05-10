@@ -50,8 +50,7 @@ html {
 
 /* -------------------------- Play button styling ------------------------ */
 .vjs-control-bar {
-  background-color: transparent !important;
-  /*display: none !important;*/ }
+  background-color: transparent !important; }
 
 .vjs-big-play-button {
   font-size: 0em !important;
@@ -64,9 +63,7 @@ html {
 .vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
   content: url("img/Playicon.png") !important; }
 
-/* Play/Pause
---------------------------------------------------------------------------------
-*/
+/* -------------------------- Play/Pause ------------------------ */
 .vjs-default-skin .vjs-play-control {
   display: block !important;
   top: -900%;
@@ -82,7 +79,7 @@ html {
 .vjs-default-skin.vjs-playing .vjs-play-control:before {
   content: url("img/Pauseicon.png") !important; }
 
-/* -------------------------- Ambassador Section  NEAT layout ------------------------ */
+/* -------------------------- Ambassador Section layout ------------------------ */
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -121,24 +118,6 @@ html {
     .card-row .card img {
       border-radius: 50%;
       width: 10em;
-      height: 10em;
-      text-align: center; }
-    .card-row .card p, .card-row .card h4 {
-      text-align: center; }
-
-/* -------------------------- Ambassador Section styling ------------------------ */
-/*div {
-
-  img {
-    border-radius: 50%;
-    width: 10em;
-    height: 10em;
-    text-align: center;
-  }
-
-  P, h4 {
-    text-align: center;
-  }
-}*/
+      height: 10em; }
 
 /*# sourceMappingURL=style.css.map */
