@@ -20,12 +20,16 @@ html {
 
 /* -------------------------- Play button styling ------------------------ */
 .vjs-control-bar {
+  background-color: transparent !important;
   /*display: none !important;*/ }
 
 .vjs-big-play-button {
-  font-size: 3em !important;
+  font-size: 0em !important;
   margin-top: -52.5px !important;
   margin-left: -52.5px !important; }
+
+.vjs-volume-menu-button, .vjs-progress-control, .vjs-remaining-time, .vjs-fullscreen-control {
+  display: none !important; }
 
 .vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
   content: url("img/Playicon.png") !important; }
@@ -35,8 +39,10 @@ html {
 */
 .vjs-default-skin .vjs-play-control {
   display: block !important;
-  top: -26.5em;
-  left: 53em;
+  top: -20.85em;
+  left: 50%;
+  margin-left: -52.5px;
+  margin-top: -52.5px;
   width: 10em;
   cursor: pointer; }
 
