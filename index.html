@@ -221,7 +221,8 @@
                     y[0].innerHTML = "";
                 }
             });
-            window.setInterval(function(){
+            populatePlaylistHTML();
+            /*window.setInterval(function(){
                 var storageA;
                 var storageB;
                 var storageB = document.getElementById("example_video_1_Youtube_api").getAttribute("src");
@@ -229,7 +230,7 @@
                     storageA = storageB;
                     populatePlaylistHTML();
                 }
-            }, 20);
+            }, 20);*/
         });
 
         function populatePlaylistHTML(){
@@ -238,9 +239,6 @@
             var pBuild = "<ul class='video-playlist'>";
             for(index = 0; index < pSize.length; index++){
                 pBuild += "<li><a";
-                /*if(pCurrent == index){
-                    pBuild += " class='active-playlist-item'";
-                }*/
                 pBuild += " href='#' onclick='navigatePlaylist("+index+")'></a></li>";
             }
             pBuild += "</ul>";
@@ -249,6 +247,9 @@
 
         function navigatePlaylist(number){
             myPlayer.playlist.currentItem(number);
+            var el = document.getElementsByClassName("video-playlist");
+            var elRel = el.find(':nth-child('+number+')');
+            elRel.className += "active-playlist-item";
         }
 
         /*function testVideoChange(videoUrl){
