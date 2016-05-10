@@ -6,7 +6,13 @@ html {
 
 /* -------------------------- Play button styling ------------------------ */
 .video-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   position: relative; }
+  .video-container:last-child {
+    margin-right: 0; }
   .video-container h3 {
     min-width: 10%;
     min-height: 10%;
@@ -63,7 +69,7 @@ html {
 */
 .vjs-default-skin .vjs-play-control {
   display: block !important;
-  top: -20.85em;
+  top: -900%;
   left: 50%;
   margin-left: -52.5px;
   margin-top: -52.5px;
@@ -91,8 +97,7 @@ html {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  text-align: justify; }
+  width: 48.82117%; }
   .intro:last-child {
     margin-right: 0; }
 
