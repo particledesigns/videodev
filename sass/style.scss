@@ -46,6 +46,9 @@
   content: url("img/Playicon.png") !important;
 
 
+
+
+
 }
 
 /* Play/Pause
@@ -53,7 +56,7 @@
 */
 .vjs-default-skin .vjs-play-control {
   display: block !important;
-  top: -20.85em;
+  top: -900%;
   left: 50%;
   margin-left:-52.5px;
   margin-top: -52.5px;
@@ -65,20 +68,22 @@
 }
 .vjs-default-skin.vjs-playing .vjs-play-control:before {
   content: url("img/Pauseicon.png") !important;
+
+
 }
 
 
 /* -------------------------- Ambassador Section  NEAT layout ------------------------ */
 
 .container {
-  @include outer-container;
+  @include outer-container();
 }
 
 .intro {
   @include shift(2);
   @include span-columns(6);
 
-  text-align: justify;
+
 }
 
 .card-row {
