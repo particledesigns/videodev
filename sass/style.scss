@@ -7,12 +7,12 @@
 
 
 .vjs-control-bar {
-  display: none !important;
+  /*display: none !important;*/
 }
 
 .vjs-big-play-button {
 
-  font-size: 0 !important;
+  font-size: 3em !important;
   margin-top: -52.5px !important;
   margin-left: -52.5px !important;
 }
@@ -23,6 +23,23 @@
   content: url("img/Playicon.png") !important;
 
 
+}
+
+/* Play/Pause
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-play-control {
+  display: block !important;
+  top: -26.5em;
+  left: 53em;
+  width: 10em;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-play-control:before {
+  content: url("img/Playicon.png") !important;
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+  content: url("img/Pauseicon.png") !important;
 }
 
 
