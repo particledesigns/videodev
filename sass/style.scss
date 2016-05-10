@@ -58,10 +58,10 @@
 
 .card-row {
   @include shift(1);
-  @include span-columns(11);
+  @include span-columns(12);
 
   .card {
-    @include span-columns(2 of 12);
+    @include span-columns(2 of 10);
     @include omega();
 
 
